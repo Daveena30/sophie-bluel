@@ -1,0 +1,12 @@
+{
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/FrontEnd/assets/css"
+      }
+    ],
+    "liveSassCompile.settings.useNewCompiler": false,
+    "liveServer.settings.port": 5501,
+    
+  }
