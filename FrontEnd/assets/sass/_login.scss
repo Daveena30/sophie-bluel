@@ -1,9 +1,14 @@
+body {
+    background-color:#FFFEF8;
+}
+
 #login {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
     width: 100%;
+    
 
     h2 {
         margin-bottom: 20px;
@@ -39,7 +44,6 @@
     input {
         padding: 10px;
         width: 400px;
-        border-radius: 15px;
         border: 1px solid grey
     }
 
@@ -56,14 +60,4 @@
         }
 
     }
-
-    footer nav ul {
-        display: flex;
-        justify-content: flex-end;
-        margin: 2em;
-      }
-      
-      footer nav ul li {
-        color: #000000;
-      }
 }

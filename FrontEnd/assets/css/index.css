@@ -1,3 +1,7 @@
+body {
+  background-color: #FFFEF8;
+}
+
 #login {
   display: flex;
   flex-direction: column;
@@ -33,7 +37,6 @@
 #login input {
   padding: 10px;
   width: 400px;
-  border-radius: 15px;
   border: 1px solid grey;
 }
 #login input[type=submit] {
@@ -45,14 +48,6 @@
 }
 #login a:hover {
   color: #1d6154;
-}
-#login footer nav ul {
-  display: flex;
-  justify-content: flex-end;
-  margin: 2em;
-}
-#login footer nav ul li {
-  color: #000000;
 }
 
 * {
