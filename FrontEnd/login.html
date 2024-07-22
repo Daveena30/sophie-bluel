@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="index.html">projets</a></li>
                 <li><a href="index.html">contact</a></li>
-                <li><a id="loginElement" class="login-focus" href="login.html">login</a></li>
+                <li><a class="login-focus" href="login.html">login</a></li>
                 <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
             </ul>
         </nav>
@@ -37,6 +37,7 @@
         <form id="login">
 
             <h2>Log In</h2>
+            <div id="success-message"></div>
             <div class="email">
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email">
@@ -49,6 +50,7 @@
             <input type="submit" value="Se connecter" id="submit">
 
             <a href="#">Mot de passe oublié?</a>
+            <div><p id="error"></p></div>
 
         </form>
     </main>
@@ -61,7 +63,7 @@
         </nav>
     </footer>
 
-    <script type="text/javascript" src="./assets/script/login.js"></script>
+    <script src="./assets/script/login.js"></script>
 
 </body>
 
