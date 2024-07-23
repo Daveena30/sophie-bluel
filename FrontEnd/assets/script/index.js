@@ -4,15 +4,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Code pour lancer l'application
     console.log('Application en cours de chargement...');
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (user && user.token) {
+    const token = localStorage.getItem('token');
+    if (token) {
       document.getElementById('login-url').style.display = 'none';
       document.getElementById('logout').style.display = 'block';
     }
   })
 
   document.getElementById('logout').addEventListener('click', function () {
-    localStorage.removeItem('user');
+    localStorage.removeItem('token');
     document.getElementById('login-url').style.display = 'block';
     document.getElementById('logout').style.display = 'none';
   })
