@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,46 +91,152 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+#modal {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: opacity 1s ease-in-out ;
+}
+
+#modal-content {
+	position: relative;
+	z-index: 999;
+	background-color: #fefefe;
+	border-radius: 15px;
+	margin: 15% auto;
+	padding: 70px;
+	border: 1px solid #888;
+	width: 40%;
+	height: 70%;
+}
+
+#modal-content button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 30px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+#modal-gallery h2 {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+#modal-gallery ul {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+#modal-gallery ul li {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#modal-gallery ul li span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #FFFFFF;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#modal-gallery ul li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /** end reset css**/
 body {
 	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
+	margin: auto;
+	font-family: 'Work Sans';
 	font-size: 14px;
 }
+
 header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0
 }
+
+.modifier {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000;
+	padding: 12px 0px;
+}
+
+.modifier button {
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 18px;
+	border: none;
+}
+
 section {
 	margin: 50px 0
 }
 
-h1{
+h1 {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Syne';
@@ -71,24 +245,25 @@ h1{
 	color: #B1663C
 }
 
-h1 > span {
+h1>span {
 	font-family: 'Work Sans';
 	font-size: 10px;
 	letter-spacing: 0.1em;
 	font-weight: 400;
 	text-transform: uppercase;
-	
+
 }
 
-h2{
+h2 {
 	font-family: 'Syne';
 	font-weight: 700;
 	font-size: 30px;
 	color: #1D6154
 }
+
 nav ul {
 	display: flex;
-	align-items: center;	
+	align-items: center;
 	list-style-type: none;
 	font-family: 'work sans';
 }
@@ -100,6 +275,7 @@ nav a {
 	font-size: 16px;
 	font-weight: 400;
 }
+
 nav li {
 	padding: 0 10px;
 	font-weight: 300;
@@ -129,9 +305,11 @@ nav li:visited {
 	display: flex;
 	align-items: center;
 }
+
 #introduction figure {
 	flex: 1
 }
+
 #introduction img {
 	display: block;
 	margin: auto;
@@ -141,6 +319,7 @@ nav li:visited {
 #introduction article {
 	flex: 1
 }
+
 #introduction h2 {
 	margin-bottom: 1em;
 }
@@ -148,10 +327,30 @@ nav li:visited {
 #introduction p {
 	margin-bottom: 0.5em;
 }
+
 #portfolio h2 {
 	text-align: center;
-	margin-bottom: 1em;
+	margin-right: 15px;
 }
+
+.heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2em;
+
+}
+
+.heading button {
+	border: none;
+	background-color: transparent;
+	color: #1D6154;
+}
+
+.heading button span {
+	margin-right: 10px;
+}
+
 .filter {
 	display: flex;
 	width: 80%;
@@ -184,20 +383,24 @@ nav li:visited {
 	width: 100%;
 
 }
+
 #contact {
 	width: 50%;
-margin: auto;
+	margin: auto;
 }
-#contact > * {
+
+#contact>* {
 	text-align: center;
 
 }
-#contact h2{
+
+#contact h2 {
 	margin-bottom: 20px;
 }
+
 #contact form {
 	text-align: left;
-	margin-top:30px;
+	margin-top: 30px;
 	display: flex;
 	flex-direction: column;
 }
@@ -208,23 +411,25 @@ margin: auto;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
+
 #contact label {
 	margin: 2em 0 1em 0;
 }
+
 #contact textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"]{
+input[type="submit"] {
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
 	background-color: #1D6154;
-	margin : 2em auto ;
+	margin: 2em auto;
 	width: 180px;
 	text-align: center;
-	border-radius: 60px ;
+	border-radius: 60px;
 }
 
 footer nav ul {
@@ -232,4 +437,3 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em
 }
-

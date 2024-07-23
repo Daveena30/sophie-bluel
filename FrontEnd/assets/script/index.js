@@ -63,6 +63,17 @@ const getCategories = async () => {
 
 document.addEventListener('DOMContentLoaded', getCategories)
 
+document.getElementById('close-modal') .addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'none';
+    document.getElementById('modal').style.opacity = 0;
+    
+})
+
+document.getElementById('open-modal').addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal').style.opacity = 1;
+
+})
 
 
 
