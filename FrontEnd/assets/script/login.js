@@ -1,4 +1,6 @@
 "use strict";
+
+
 // ********** CONSTANTS ********** //
 
 const form = document.querySelector("form");
@@ -74,7 +76,7 @@ document
       } else {
 
         const p = document.createElement('p');
-        p.textContent = "Erreur lors de la connexion" + "${response.status}";
+        p.textContent = "mot de passe ou email incorrect";
 
         const errorContainer = document.getElementById('error');
         if (errorContainer) {

@@ -97,7 +97,8 @@ nav a {
 	text-decoration: none;
 	color: #000000;
 	padding: 0 10px;
-	font-size: 1.2em;
+	font-size: 16px;
+	font-weight: 400;
 }
 nav li {
 	padding: 0 10px;
@@ -119,7 +120,7 @@ nav img {
 	width: 20px;
 }
 
-nav li:hover {
+nav li:visited {
 	color: #000000;
 	cursor: pointer;
 }

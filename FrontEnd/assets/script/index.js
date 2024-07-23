@@ -42,7 +42,26 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('DOMContentLoaded', getWorks) 
 
 
+const getCategories = async () => {
+    const categoriesDoc = document.getElementById('categories');
 
+    try {
+        const response = await fetch('http://localhost:5678/api/categories');
+        const categories = await response.json();
+        console.log(categories);
+
+        categories.forEach((category) => {
+            const categoryElement = document.createElement('button');
+            categoryElement.textContent = category.name;
+            categoriesDoc.appendChild(categoryElement);
+        });
+
+    } catch (error) {
+        console.log(error);
+        }
+}
+
+document.addEventListener('DOMContentLoaded', getCategories)
 
 
 
