@@ -26,17 +26,51 @@
 			<button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
 			<div id="modal-gallery">
 				<h2>Galerie photo</h2>
-				<ul>
-					<li><img src="./assets/images/abajour-tahina.png" alt=""><span><i class="fa-solid fa-trash-can"></i></span></li>
-					<li><img src="./assets/images/appartement-paris-v.png" alt=""><span><i class="fa-solid fa-trash-can"></i></span></li>
-					<li><img src="./assets/images/appartement-paris-x.png" alt=""><span><i class="fa-solid fa-trash-can"></i></span></li>
-					<li><img src="./assets/images/appartement-paris-xviii.png" alt=""><span><i class="fa-solid fa-trash-can"></i></span></li>
-					<li><img src="./assets/images/bar-lullaby-paris.png" alt=""><span><i class="fa-solid fa-trash-can"></i></span></li>
-				</ul>
+				<ul id="modal-images"></ul>
 			</div>
+
+			<div class="modal-footer">
+				<div><button id="open-second-modal">Ajouter une photo</button></div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="overflow-modal">
+		<div id="second-modal-content">
+			<button id="return-second-modal"><i class="fa-solid fa-arrow-left"></i></button>
+			<button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+			<div class="modal-title">
+				<h2>Ajout photo</h2>
+			</div>
+
+			<div class="modal-header"><i class="fa-regular fa-image"></i>
+				<button id="add-photo-modal">+ Ajouter photo</button>
+				<span> jpg, png: 4mo max</span>
+			</div>
+
+			<!-- Contenu de la deuxième modale -->
+			<form id="create-works-form">
+				<label for="file">Titre</label>
+				<input type="text" placeholder="Titre">
+				<label for="Catégorie">Catégorie</label>
+				<select>
+					<option value="Catégorie"></option>
+					<option value="Objets">Objets</option>
+					<option value="Appartements">Appartements</option>
+					<option value="Hotels & restaurants">Hotels & restaurants</option>
+				</select>
+				<div class="create-works-btn">
+					<div><button id="create-works">Valider</button></div>
+				</div>
+			</form>
 		</div>
 
 	</div>
+
+
+
+
 
 	<header>
 		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
@@ -73,7 +107,8 @@
 		<section id="portfolio">
 			<div class="heading">
 				<h2>Mes Projets</h2>
-				<button id="open-modal"><span><i class="fa-regular fa-pen-to-square"></i></span><span>Modifier</span></button>
+				<button id="open-modal"><span><i
+							class="fa-regular fa-pen-to-square"></i></span><span>Modifier</span></button>
 			</div>
 			<ul id="categories" class="filter">
 				<li><button>Tous</button></li>
