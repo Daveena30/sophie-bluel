@@ -23,14 +23,16 @@
 	</div>
 	<div id="modal">
 		<div id="modal-content">
-			<button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+			<button onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
 			<div id="modal-gallery">
 				<h2>Galerie photo</h2>
 				<ul id="modal-images"></ul>
 			</div>
 
 			<div class="modal-footer">
-				<div><button id="open-second-modal">Ajouter une photo</button></div>
+				<div>
+					<button id="add-photo" onclick="openSecondModal()">Ajouter une photo</button>
+				</div>
 			</div>
 
 		</div>
@@ -38,30 +40,36 @@
 
 	<div id="overflow-modal">
 		<div id="second-modal-content">
-			<button id="return-second-modal"><i class="fa-solid fa-arrow-left"></i></button>
-			<button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+			<button onclick="returnToModal()" id="return-second-modal"><i class="fa-solid fa-arrow-left"></i></button>
+			<button onclick="closeSecondModal()" id="close-modal"><i class="fa-solid fa-xmark"></i></button>
 			<div class="modal-title">
 				<h2>Ajout photo</h2>
 			</div>
 
-			<div class="modal-header"><i class="fa-regular fa-image"></i>
-				<button id="add-photo-modal">+ Ajouter photo</button>
+			<!-- Contenu de la deuxième modale -->
+			<div class="modal-header">
+				<i class="fa-regular fa-image" id="imageIcon"></i>
+				<div id="imageContainer"></div>
+				<input type="file" id="fileInput" name="image" accept="image/**" />
+				<button onclick="selectImage()" id="add-photo-modal">
+					+ Ajouter photo
+				</button>
 				<span> jpg, png: 4mo max</span>
 			</div>
 
-			<!-- Contenu de la deuxième modale -->
+
 			<form id="create-works-form">
 				<label for="file">Titre</label>
-				<input type="text" placeholder="Titre">
-				<label for="Catégorie">Catégorie</label>
-				<select>
+				<input type="text" id="title" name="title" placeholder="Titre" required />
+				<label for="category">Catégorie</label>
+				<select id="category" name="category" required>
 					<option value="Catégorie"></option>
-					<option value="Objets">Objets</option>
-					<option value="Appartements">Appartements</option>
-					<option value="Hotels & restaurants">Hotels & restaurants</option>
+					<option value="1">Objets</option>
+					<option value="2">Appartements</option>
+					<option value="3">Hotels & restaurants</option>
 				</select>
 				<div class="create-works-btn">
-					<div><button id="create-works">Valider</button></div>
+					<div><button type="submit" id="create-works">Valider</button></div>
 				</div>
 			</form>
 		</div>
@@ -111,9 +119,10 @@
 							class="fa-regular fa-pen-to-square"></i></span><span>Modifier</span></button>
 			</div>
 			<ul id="categories" class="filter">
-				<li><button>Tous</button></li>
-
-			</ul>
+				<li id="categorie">
+					<button id="all-work" data-category="0">Tous</button>
+				  </li>
+				</ul>
 			<div id="mywork" class="gallery"></div>
 		</section>
 		<section id="contact">

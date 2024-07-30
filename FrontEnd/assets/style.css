@@ -121,10 +121,11 @@ body {
 	bottom: 0;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.4);
-	transition: opacity 1s ease-in-out ;
+	transition: opacity 1s ease-in-out;
 }
 
-#modal-content, #second-modal-content {
+#modal-content,
+#second-modal-content {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -136,6 +137,17 @@ body {
 	border: 1px solid #888;
 	width: 40%;
 	height: 70%;
+}
+
+#imageContainer {
+	height: 100px;
+	width: 100px;
+}
+
+#imageContainer img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 #modal-content #close-modal {
@@ -202,11 +214,11 @@ body {
 	font-size: 18px;
 	border-radius: 60px;
 	padding: 12px 40px;
-	
+
 }
 
 #overflow-modal {
-	display: block;
+	display: none;
 	position: fixed;
 	z-index: 100;
 	left: 0;
@@ -215,7 +227,8 @@ body {
 	bottom: 0;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.4);
-	transition: opacity 1s ease-in-out ;
+	transition: opacity 1s ease-in-out;
+	opacity: 0;
 }
 
 .modal-title {
@@ -234,7 +247,7 @@ body {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	font-size: 30px;
+	font-size: 21px;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
@@ -245,7 +258,7 @@ body {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	font-size: 30px;
+	font-size: 21px;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
@@ -316,6 +329,7 @@ body {
 #create-works-form button {
 	margin-top: 20px;
 	background-color: #CBD6DC;
+	color: #FFFFFF;
 	border: none;
 	cursor: pointer;
 	margin-bottom: 5px;
@@ -323,6 +337,8 @@ body {
 	border-radius: 50px;
 	width: 200px;
 }
+
+
 
 ol,
 ul {
@@ -386,17 +402,16 @@ h1 {
 	font-family: 'Syne';
 	font-size: 22px;
 	font-weight: 800;
-	color: #B1663C
-}
-
-h1>span {
+	color: #b1663c;
+  }
+  
+  h1 > span {
 	font-family: 'Work Sans';
 	font-size: 10px;
 	letter-spacing: 0.1em;
 	font-weight: 400;
 	text-transform: uppercase;
-
-}
+  }
 
 h2 {
 	font-family: 'Syne';
@@ -435,6 +450,10 @@ nav a:hover {
 .logout {
 	display: none;
 }
+
+#fileInput {
+	display: none;
+  }
 
 nav img {
 	width: 20px;
@@ -511,9 +530,22 @@ nav li:visited {
 	border: 1px solid #1D6154;
 	border-radius: 60px;
 	margin-right: 15px;
-
-
+	cursor: pointer;
 }
+
+.category__btn {
+	background-color: transparent; /* Couleur de fond initiale */
+  }
+  
+  .category__btn.active {
+	background-color: #1d6154;
+	color: #ffffff; /* Couleur de fond lorsque le bouton est actif */
+  }
+  
+  .btn-all {
+	background-color: #1d6154 !important;
+	color: #ffffff;
+  }
 
 .gallery {
 	width: 100%;
@@ -533,7 +565,7 @@ nav li:visited {
 	margin: auto;
 }
 
-#contact>* {
+#contact > * {
 	text-align: center;
 
 }
