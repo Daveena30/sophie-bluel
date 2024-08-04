@@ -217,6 +217,18 @@ body {
 
 }
 
+#add-photo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1d6154;
+	color: #ffffff;
+	font-size: 18px;
+	border-radius: 60px;
+	padding: 12px 40px;
+}
+
+
 #overflow-modal {
 	display: none;
 	position: fixed;
@@ -254,7 +266,8 @@ body {
 
 }
 
-#close-modal {
+#close-modal,
+#second-close-modal {
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -338,7 +351,29 @@ body {
 	width: 200px;
 }
 
-
+.unenabled-button {
+	margin-top: 20px;
+	background-color: #cbd6dc;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 5px;
+	padding: 10px 20px;
+	border-radius: 50px;
+	width: 200px;
+  }
+  
+  .enabled-button {
+	margin-top: 20px;
+	background-color: #1d6154 !important;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 5px;
+	padding: 10px 20px;
+	border-radius: 50px;
+	width: 200px;
+  }
 
 ol,
 ul {
@@ -403,15 +438,15 @@ h1 {
 	font-size: 22px;
 	font-weight: 800;
 	color: #b1663c;
-  }
-  
-  h1 > span {
+}
+
+h1>span {
 	font-family: 'Work Sans';
 	font-size: 10px;
 	letter-spacing: 0.1em;
 	font-weight: 400;
 	text-transform: uppercase;
-  }
+}
 
 h2 {
 	font-family: 'Syne';
@@ -453,7 +488,7 @@ nav a:hover {
 
 #fileInput {
 	display: none;
-  }
+}
 
 nav img {
 	width: 20px;
@@ -534,18 +569,20 @@ nav li:visited {
 }
 
 .category__btn {
-	background-color: transparent; /* Couleur de fond initiale */
-  }
-  
-  .category__btn.active {
+	background-color: transparent;
+	/* Couleur de fond initiale */
+}
+
+.category__btn.active {
 	background-color: #1d6154;
-	color: #ffffff; /* Couleur de fond lorsque le bouton est actif */
-  }
-  
-  .btn-all {
+	color: #ffffff;
+	/* Couleur de fond lorsque le bouton est actif */
+}
+
+.btn-all {
 	background-color: #1d6154 !important;
 	color: #ffffff;
-  }
+}
 
 .gallery {
 	width: 100%;
@@ -565,7 +602,7 @@ nav li:visited {
 	margin: auto;
 }
 
-#contact > * {
+#contact>* {
 	text-align: center;
 
 }

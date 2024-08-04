@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="description" content="">
@@ -82,11 +80,13 @@
                 </li>
             </ul>
 
-            <div id="mywork" class="gallery"></div>
+            <div id="work" class="gallery"></div>
 
             <div id="modal">
                 <div id="modal-content">
-                    <button onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+                    <button id="close-modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                     <div id="modal-gallery">
                         <h2>Galerie photo</h2>
                         <ul id="modal-images"></ul>
@@ -94,19 +94,22 @@
 
                     <div class="modal-footer">
                         <div>
-                            <button id="add-photo" onclick="openSecondModal()">Ajouter une photo</button>
+                            <button id="add-photo">Ajouter une photo</button>
                         </div>
                     </div>
-        
+
                 </div>
             </div>
-        
+
             <div id="overflow-modal">
                 <div id="second-modal-content">
-                    <button onclick="returnToModal()" id="return-second-modal"><i
-                            class="fa-solid fa-arrow-left"></i></button>
-                    <button onclick="closeSecondModal()" id="close-modal"><i
-                            class="fa-solid fa-xmark"></i></button>
+                    <div id="error_submit"></div>
+                    <button id="return-second-modal">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button id="second-close-modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                     <div class="modal-title">
                         <h2>Ajout photo</h2>
                     </div>
@@ -116,9 +119,7 @@
                         <i class="fa-regular fa-image" id="imageIcon"></i>
                         <div id="imageContainer"></div>
                         <input type="file" id="fileInput" name="image" accept="image/**" />
-                        <button onclick="selectImage()" id="add-photo-modal">
-                            + Ajouter photo
-                        </button>
+                        <button id="add-photo-modal">+ Ajouter photo</button>
                         <span> jpg, png: 4mo max</span>
                     </div>
 
@@ -128,7 +129,9 @@
                         <label for="category">Catégorie</label>
                         <select id="category" name="category" required></select>
                         <div class="create-works-btn">
-                            <div><button type="submit" id="create-works">Valider</button></div>
+                            <div><button class="unenabled-button" type="submit" id="create-works">
+                                    Valider
+                                </button></div>
                         </div>
                     </form>
                 </div>
