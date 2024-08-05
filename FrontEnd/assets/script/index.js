@@ -37,6 +37,7 @@ const displayWorks = async () => {
 
   for (const work of works) {
     const figure = document.createElement('figure');
+    console.log(work);
 
     figure.innerHTML = `
       <img src="${work.imageUrl}" alt="${work.title}">

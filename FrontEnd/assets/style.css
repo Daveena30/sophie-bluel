@@ -201,7 +201,7 @@ body {
 	width: 100%;
 	margin-top: 80px;
 	border-top: #1D6154 solid 1px;
-	padding: 15px 0;
+	padding: 35px 0;
 
 }
 
@@ -223,9 +223,13 @@ body {
 	align-items: center;
 	background-color: #1d6154;
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: 'syne';
 	border-radius: 60px;
-	padding: 12px 40px;
+	padding: 5px 50px;
+
+
 }
 
 
@@ -288,13 +292,14 @@ body {
 
 .modal-header i {
 	font-size: 50px;
-	color: grey;
+	color: #B9C5CC;
 	margin-bottom: 10px;
 	cursor: pointer;
 }
 
 .modal-header button {
 	background-color: #CBD6DC;
+	color: #306685;
 	border: none;
 	cursor: pointer;
 	margin-bottom: 5px;
@@ -341,7 +346,10 @@ body {
 
 #create-works-form button {
 	margin-top: 20px;
-	background-color: #CBD6DC;
+	background-color: #A7A7A7;
+	font-family: syne;
+	font-weight: 400;
+	font-size: 14px;
 	color: #FFFFFF;
 	border: none;
 	cursor: pointer;
@@ -361,9 +369,9 @@ body {
 	padding: 10px 20px;
 	border-radius: 50px;
 	width: 200px;
-  }
-  
-  .enabled-button {
+}
+
+.enabled-button {
 	margin-top: 20px;
 	background-color: #1d6154 !important;
 	color: #ffffff;
@@ -373,7 +381,7 @@ body {
 	padding: 10px 20px;
 	border-radius: 50px;
 	width: 200px;
-  }
+}
 
 ol,
 ul {
@@ -406,6 +414,10 @@ body {
 	font-size: 14px;
 }
 
+.edit {
+	margin-left: 10px;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -418,6 +430,8 @@ header {
 	align-items: center;
 	background-color: #000000;
 	padding: 12px 0px;
+
+
 }
 
 .modifier button {
@@ -455,6 +469,15 @@ h2 {
 	color: #1D6154
 }
 
+.modal-title {
+	font-family: Work Sans;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 30.5px;
+	text-align: center;
+	color: #000000
+}
+
 nav ul {
 	display: flex;
 	align-items: center;
@@ -467,7 +490,8 @@ nav a {
 	color: #000000;
 	padding: 0 10px;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 500;
+
 }
 
 nav li {
@@ -480,6 +504,7 @@ nav li {
 
 nav a:hover {
 	color: #000000;
+	font-weight: 700;
 }
 
 .logout {
@@ -547,6 +572,7 @@ nav li:visited {
 
 .heading button span {
 	margin-right: 10px;
+	color: #000000;
 }
 
 .filter {
@@ -649,4 +675,10 @@ footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
+}
+
+footer nav li {
+	font-family: 'work sans';
+	font-size: 14px;
+	font-weight: 300;
 }
