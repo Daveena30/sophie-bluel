@@ -74,6 +74,7 @@ const openModal = () => {
   document.getElementById('modal').style.opacity = 1;
 
   const modalImages = document.getElementById('modal-images')
+  modalImages.innerHTML = '';
 
   works.forEach((work) => {
     const li = document.createElement('li');
@@ -132,8 +133,10 @@ const openSecondModal = () => {
 
 
 const categoriesElement = document.getElementById('category');
+categoriesElement.innerHTML = '';
+const emptyOptions = document.createElement('option');
+categoriesElement.appendChild(emptyOptions);
 
-  categoriesElement.innerHTML = '';
 
   for (const category of categories) {
     const option = document.createElement('option');

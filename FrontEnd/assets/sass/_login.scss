@@ -1,6 +1,10 @@
 body {
     background-color:#FFFEF8;
     font-family: work sans;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 5fr 1fr;
+
 }
 
 #login {
@@ -67,3 +71,6 @@ body {
 
 
 }
+
+
+
