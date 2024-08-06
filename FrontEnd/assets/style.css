@@ -589,6 +589,7 @@ nav li:visited {
 	/*background-color: #1D6154; */
 	background-color: transparent;
 	border: 1px solid #1D6154;
+	font-family: 'syne';
 	border-radius: 60px;
 	margin-right: 15px;
 	cursor: pointer;
@@ -596,6 +597,7 @@ nav li:visited {
 
 .category__btn {
 	background-color: transparent;
+	color: #1D6154;
 	/* Couleur de fond initiale */
 }
 
