@@ -136,7 +136,7 @@ body {
 	padding: 70px;
 	border: 1px solid #888;
 	width: 40%;
-	height: 70%;
+	min-height: 50%;
 }
 
 #imageContainer {

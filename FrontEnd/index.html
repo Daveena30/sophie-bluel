@@ -76,7 +76,7 @@
 
             <ul id="categories" class="filter">
                 <li id="categorie">
-                    <button id="all-work" data-category="0">Tous</button>
+                    <button id="all-work" class="category__btn" data-category="0">Tous</button>
                 </li>
             </ul>
 
@@ -103,7 +103,6 @@
 
             <div id="overflow-modal">
                 <div id="second-modal-content">
-                    <div id="error_submit"></div>
                     <button id="return-second-modal">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
@@ -128,6 +127,7 @@
                         <input type="text" id="title" name="title" placeholder="" required />
                         <label for="category">Catégorie</label>
                         <select id="category" name="category" required></select>
+                        <div id="error_submit"></div>
                         <div class="create-works-btn">
                             <div><button class="unenabled-button" type="submit" id="create-works">
                                     Valider
